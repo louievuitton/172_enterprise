@@ -1,0 +1,9 @@
+---
+- hosts: ec2
+  sudo: yes
+  tasks:
+	  -	name: install apache2
+		raw: sudo apt-get -y install apache2
+		
+	  -	name: hello world
+		copy: src=/home/stevenlouie/index.html dest=/var/www/html/index.html

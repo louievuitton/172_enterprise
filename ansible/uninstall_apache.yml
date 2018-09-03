@@ -1,0 +1,9 @@
+---
+- hosts: ec2
+  sudo: yes
+  tasks:
+	  - name: uninstall apache2
+		raw: sudo apt-get -y purge apache2 apache2-utils apache2.2-bin
+		
+	  -	name: autoremove
+		raw: sudo apt-get -y autoremove
