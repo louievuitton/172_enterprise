@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+form {
+  text-align: center;
+}
+
+.landing {
+  padding-left: 5rem;
+}
+
+.home {
+  text-align: center;
+}
+
+.notfound {
+  padding-left: 5rem;
+}
