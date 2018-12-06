@@ -14,14 +14,14 @@ window.setState = (changes) => {
 };
 
 /* eslint no-restricted-globals: 0*/
-let username = auth.getProfile().name || "";
+let name = auth.getProfile().name || "";
 
-let initialState = {
-    name: username,
+let initState = {
+    name: name,
     location: location.pathname.replace(/^\/?|\/$/g, ""),
     auth
 };
 
-window.setState(initialState);
+window.setState(initState);
 
 registerServiceWorker();

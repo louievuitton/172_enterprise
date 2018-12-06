@@ -59,6 +59,7 @@ class AddEmployeeInfo extends Component {
                         <select type="text" onChange={event => this.setState({designation: event.target.value})}>
                             <option></option>
                             <option type="text">Software Engineer</option>
+                            <option type="text">Computer Engineer</option>
                             <option type="text">Engineer</option>
                             <option type="text">Accountant</option>
                             <option type="text">People Operations</option>
