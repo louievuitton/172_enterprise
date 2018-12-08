@@ -9,7 +9,6 @@ class EmployeeList extends Component {
             id: ''
         };
         this.updateSearch = this.updateSearch.bind(this);
-        this.handleDelete = this.handleDelete.bind(this);
     }
 
     componentDidMount() {
@@ -20,21 +19,6 @@ class EmployeeList extends Component {
 
     updateSearch(event) {
         this.setState({search: event.target.value});
-    }
-
-    handleDelete = event => {
-        event.preventDefault();
-        
-        fetch(`/employees/${this.state.employees._id}`, {
-            method: 'DELETE', 
-            // headers: {
-            //     'Content-Type': 'application/json'
-            // },
-            // // body: JSON.stringify({
-            //     id: ''
-            // })      
-        })
-        // .then(response => response.json());
     }
 
     render() {
