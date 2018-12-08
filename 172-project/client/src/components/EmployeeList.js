@@ -5,9 +5,11 @@ class EmployeeList extends Component {
         super(props);
         this.state = {
             employees: [],
-            search: ''
+            search: '',
+            id: ''
         };
         this.updateSearch = this.updateSearch.bind(this);
+        this.handleDelete = this.handleDelete.bind(this);
     }
 
     componentDidMount() {
@@ -20,11 +22,25 @@ class EmployeeList extends Component {
         this.setState({search: event.target.value});
     }
 
+    handleDelete = event => {
+        event.preventDefault();
+        
+        fetch(`/employees/${this.state.employees._id}`, {
+            method: 'DELETE', 
+            // headers: {
+            //     'Content-Type': 'application/json'
+            // },
+            // // body: JSON.stringify({
+            //     id: ''
+            // })      
+        })
+        // .then(response => response.json());
+    }
+
     render() {
         let filteredEmployeees = this.state.employees.filter(employee => {
             return employee.firstName.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1 || employee.lastName.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1;
         });
-        
         return (
             <React.Fragment>
                 <label>Find by name:

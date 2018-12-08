@@ -1,3 +1,4 @@
+/* eslint no-restricted-globals: 0*/
 import React, { Component } from 'react';
 
 class AddEmployeeInfo extends Component {
@@ -29,7 +30,8 @@ class AddEmployeeInfo extends Component {
                 branch: this.state.branch,
                 designation: this.state.designation
             })
-        });
+        })
+        .then(location.pathname = "/payroll");
     }
 
     render() { 
