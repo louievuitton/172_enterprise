@@ -1,1 +1,1 @@
-# 172_enterprise ..
+# cmpe 172 Enterprise Software Platforms
